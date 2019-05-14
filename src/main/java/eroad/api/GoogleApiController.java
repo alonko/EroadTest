@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class GoogleApiController {
-    private static final String API_KEY = "AIzaSyBFqDyKTexVbO6rgP427LZJQ6eHIaYHZXw";
+    private static final String API_KEY = "";
     private static GeoApiContext context;
 
     public GoogleApiController() {
