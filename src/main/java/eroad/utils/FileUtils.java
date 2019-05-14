@@ -37,7 +37,7 @@ public class FileUtils {
      * @param fileExtension The file extension (csv)
      * @return true if the file type is supported (currently only csv is supported)
      */
-    public static boolean isValidExtension(String fileExtension) {
+    static boolean isValidExtension(String fileExtension) {
         for (FileExtension extension : FileExtension.values()) {
             if (extension.toString().equalsIgnoreCase(fileExtension))
                 return true;

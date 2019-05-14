@@ -8,5 +8,3 @@ This application will read a CSV file which contains UTC datetime, latitude and 
 Add as parameters the source file path followed by the destination file path or alternatively don't provide any arguments and the application will use the default files: 
 * src/main/resources/csv/input.csv
 * src/main/resources/csv/output.csv
-
-Please set a Google Api Key in `eroad.api.GoogleApiController.API_KEY` field.

@@ -15,6 +15,8 @@ import java.util.logging.Logger;
 
 /**
  * @author Alon Kodner
+ *
+ * Used for working with CSV files
  */
 @Component
 public class CSVFileProcessor implements FileProcessor {
@@ -44,7 +46,7 @@ public class CSVFileProcessor implements FileProcessor {
 
     /**
      * @param targetFileName The output file
-     * @param models The updated models to be written to the output file
+     * @param models         The models to be written to the output file
      */
     @Override
     public void writeModelsToFile(String targetFileName, List<DataModel> models) {
@@ -79,6 +81,7 @@ public class CSVFileProcessor implements FileProcessor {
      * @return Object representation of a single CSV line
      */
     private DataModel createModel(String[] fileLine) {
+        assert fileLine.length == 3 : "Each line needs to contain 3 values";
         DataModel model = new DataModel();
         model.setUtcDate(fileLine[ModelFieldIndexes.UTC_DATE.getIndex()]);
         model.setLatitude(fileLine[ModelFieldIndexes.LATITUDE.getIndex()]);

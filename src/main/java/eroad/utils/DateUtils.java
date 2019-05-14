@@ -40,13 +40,12 @@ public class DateUtils {
      * @return the local date as string
      */
     public static String getLocalDate(long timeStamp, String timeZoneId) {
-        Date newDate = new Date();
-        long millisecondTimeStamp = (timeStamp) * 1000; //Converting back to milliseconds
-
         DateFormat dateFormatter = new SimpleDateFormat(OUTPUT_DATE_FORMAT);
         dateFormatter.setTimeZone(TimeZone.getTimeZone(timeZoneId));
-        newDate.setTime(millisecondTimeStamp);
 
-        return dateFormatter.format(newDate);
+        long millisecondTimeStamp = (timeStamp) * 1000; //Converting back to milliseconds
+        Date localDate = new Date(millisecondTimeStamp);
+
+        return dateFormatter.format(localDate);
     }
 }
