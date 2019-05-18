@@ -68,7 +68,7 @@ public class MainHandler {
         }
     }
 
-    private CompletableFuture<String> getTimeZone(DataModel dataModel) {
+    CompletableFuture<String> getTimeZone(DataModel dataModel) {
         LatLng location = new LatLng(Double.parseDouble(dataModel.getLatitude()), Double.parseDouble(dataModel.getLongitude()));
         final CompletableFuture<String> future = new CompletableFuture<>();
         TimeZoneApi.getTimeZone(apiController.getGeoApiContext(), location).setCallback(new PendingResult.Callback<>() {
@@ -91,7 +91,7 @@ public class MainHandler {
         return future;
     }
 
-    private CompletableFuture<DataModel> updateModel(DataModel dataModel, CompletableFuture<String> timeZoneIdCompletableFuture) {
+    CompletableFuture<DataModel> updateModel(DataModel dataModel, CompletableFuture<String> timeZoneIdCompletableFuture) {
         Long timestamp = DateUtils.getUTCSeconds(dataModel.getUtcDate());
         assert timestamp != null;
         try {

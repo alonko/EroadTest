@@ -14,10 +14,14 @@ public class GoogleApiController {
     private static GeoApiContext context;
 
     public GoogleApiController() {
-        context = new GeoApiContext.Builder().apiKey(API_KEY).build();
+        context = new GeoApiContext.Builder().apiKey(getApiKey()).build();
     }
 
     public GeoApiContext getGeoApiContext() {
         return context;
+    }
+
+    public String getApiKey(){
+        return API_KEY;
     }
 }

@@ -2,7 +2,7 @@ package eroad.model;
 
 /**
  * @author Alon Kodner
- *
+ * <p>
  * Object representation of the CSV model
  */
 public class DataModel {

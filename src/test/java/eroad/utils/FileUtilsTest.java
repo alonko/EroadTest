@@ -1,7 +1,9 @@
 package eroad.utils;
 
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -12,10 +14,13 @@ import static org.junit.Assert.*;
  */
 @RunWith(SpringRunner.class)
 public class FileUtilsTest {
+    @Rule
+    public ExpectedException exceptionRule = ExpectedException.none();
+
     private String fileDescription;
 
     @Before
-    public void setup(){
+    public void setup() {
         fileDescription = "desc";
     }
 
@@ -26,32 +31,23 @@ public class FileUtilsTest {
 
     @Test
     public void validateFileInputTest_emptyFile() {
-        try {
-            FileUtils.validateFileInput(null, fileDescription);
-            fail();
-        } catch (IllegalArgumentException e) {
-            assertEquals(fileDescription + " file required", e.getMessage());
-        }
+        exceptionRule.expect(IllegalArgumentException.class);
+        exceptionRule.expectMessage(fileDescription + " file required");
+        FileUtils.validateFileInput(null, fileDescription);
     }
 
     @Test
     public void validateFileInputTest_NoFileExtension() {
-        try {
-            FileUtils.validateFileInput("test", fileDescription);
-            fail();
-        } catch (IllegalArgumentException e) {
-            assertEquals(fileDescription + " file has not valid file name: test", e.getMessage());
-        }
+        exceptionRule.expect(IllegalArgumentException.class);
+        exceptionRule.expectMessage(fileDescription + " file has not valid file name: test");
+        FileUtils.validateFileInput("test", fileDescription);
     }
 
     @Test
     public void validateFileInputTest_NotSupportedFileExtension() {
-        try {
-            FileUtils.validateFileInput("test.txt", fileDescription);
-            fail();
-        } catch (IllegalArgumentException e) {
-            assertEquals(fileDescription + " file is of not supported file type: txt, supported file types: CSV", e.getMessage());
-        }
+        exceptionRule.expect(IllegalArgumentException.class);
+        exceptionRule.expectMessage(fileDescription + " file is of not supported file type: txt, supported file types: CSV");
+        FileUtils.validateFileInput("test.txt", fileDescription);
     }
 
     @Test
@@ -67,5 +63,4 @@ public class FileUtilsTest {
         assertFalse(FileUtils.isValidExtension("txt"));
         assertFalse(FileUtils.isValidExtension("tst"));
     }
-
 }

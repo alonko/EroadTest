@@ -15,7 +15,7 @@ import java.util.logging.Logger;
 
 /**
  * @author Alon Kodner
- *
+ * <p>
  * Used for working with CSV files
  */
 @Component
@@ -28,10 +28,8 @@ public class CSVFileProcessor implements FileProcessor {
      */
     @Override
     public List<DataModel> getModelsFromFile(String sourceFileName) {
-        CSVReader reader;
         List<DataModel> inputList = new ArrayList<>();
-        try {
-            reader = new CSVReader(new FileReader(sourceFileName));
+        try (CSVReader reader = new CSVReader(new FileReader(sourceFileName))) {
             String[] nextLine;
             while ((nextLine = reader.readNext()) != null) {
                 DataModel model = createModel(nextLine);
@@ -50,42 +48,44 @@ public class CSVFileProcessor implements FileProcessor {
      */
     @Override
     public void writeModelsToFile(String targetFileName, List<DataModel> models) {
-        CSVWriter writer = null;
-        try {
-            writer = new CSVWriter(new FileWriter(targetFileName));
-
-            String[] entries = new String[5];
-            for (DataModel model : models) {
-                entries[ModelFieldIndexes.UTC_DATE.getIndex()] = model.getUtcDate().trim();
-                entries[ModelFieldIndexes.LATITUDE.getIndex()] = model.getLatitude().trim();
-                entries[ModelFieldIndexes.LONGITUDE.getIndex()] = model.getLongitude().trim();
-                entries[ModelFieldIndexes.TIME_ZONE.getIndex()] = model.getTimeZoneId().trim();
-                entries[ModelFieldIndexes.LOCAL_DATE.getIndex()] = model.getLocalDate().trim();
-                writer.writeNext(entries, false);
-            }
+        try (CSVWriter writer = new CSVWriter(new FileWriter(targetFileName))) {
+            List<String[]> modelsToWrite = createModelsStringRepresentation(models);
+            writer.writeAll(modelsToWrite, false);
         } catch (IOException e) {
+            LOGGER.severe("Failed to write files to file");
             e.printStackTrace();
-        } finally {
-            if (writer != null) {
-                try {
-                    writer.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
         }
+    }
+
+    List<String[]> createModelsStringRepresentation(List<DataModel> models) {
+        List<String[]> modelsToWrite = new ArrayList<>(models.size());
+        for (DataModel model : models) {
+            String[] entries = new String[5];
+            entries[ModelFieldIndexes.UTC_DATE.getIndex()] = model.getUtcDate().trim();
+            entries[ModelFieldIndexes.LATITUDE.getIndex()] = model.getLatitude().trim();
+            entries[ModelFieldIndexes.LONGITUDE.getIndex()] = model.getLongitude().trim();
+            entries[ModelFieldIndexes.TIME_ZONE.getIndex()] = model.getTimeZoneId().trim();
+            entries[ModelFieldIndexes.LOCAL_DATE.getIndex()] = model.getLocalDate().trim();
+            modelsToWrite.add(entries);
+        }
+        return modelsToWrite;
     }
 
     /**
      * @param fileLine Single line from the CSV file
      * @return Object representation of a single CSV line
      */
-    private DataModel createModel(String[] fileLine) {
+    DataModel createModel(String[] fileLine) {
         assert fileLine.length == 3 : "Each line needs to contain 3 values";
         DataModel model = new DataModel();
-        model.setUtcDate(fileLine[ModelFieldIndexes.UTC_DATE.getIndex()]);
-        model.setLatitude(fileLine[ModelFieldIndexes.LATITUDE.getIndex()]);
-        model.setLongitude(fileLine[ModelFieldIndexes.LONGITUDE.getIndex()]);
+        try {
+            model.setUtcDate(fileLine[ModelFieldIndexes.UTC_DATE.getIndex()]);
+            model.setLatitude(fileLine[ModelFieldIndexes.LATITUDE.getIndex()]);
+            model.setLongitude(fileLine[ModelFieldIndexes.LONGITUDE.getIndex()]);
+        } catch (Exception e) {
+            LOGGER.severe("Failed to create the model");
+            e.printStackTrace();
+        }
 
         return model;
     }

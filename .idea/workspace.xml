@@ -23,22 +23,21 @@
     <option name="FILTER_BY_CURRENT_PROJECT" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82f78d42-852c-4912-81d5-eb59290dc3f2" name="Default Changelist" comment="" />
-    <list id="a33539a1-421a-4284-957e-83ea5a977569" name="commit" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/eroad/file/CSVFileProcessorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="82f78d42-852c-4912-81d5-eb59290dc3f2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/eroad/MainHandlerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/csv/input.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/csv/output.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/eroad/MainHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eroad/MainHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/eroad/api/ApiController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/eroad/api/GoogleApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eroad/api/GoogleApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/eroad/api/HttpController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/eroad/file/CSVFileProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eroad/file/CSVFileProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/eroad/utils/DateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eroad/utils/DateUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/eroad/utils/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eroad/utils/FileUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/eroad/model/DataModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eroad/model/DataModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/eroad/model/ModelFieldIndexes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eroad/model/ModelFieldIndexes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/csv/input.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/csv/input.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/eroad/file/CSVFileProcessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/eroad/file/CSVFileProcessorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/eroad/utils/FileUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/eroad/utils/FileUtilsTest.java" afterDir="false" />
     </list>
+    <list id="a33539a1-421a-4284-957e-83ea5a977569" name="commit" comment="Using Google Maps Geo Api.&#10;Use of CompletableFuture added.&#10;Switched to Java 12." />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -69,23 +68,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/eroad/api/GoogleApiController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+            <state relative-caret-position="204">
+              <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#399#400#0" expanded="true" />
+                <element signature="e#480#481#0" expanded="true" />
+                <element signature="e#589#590#0" expanded="true" />
+                <element signature="e#619#620#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="35" lean-forward="true" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -93,8 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/eroad/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
+            <state relative-caret-position="724">
+              <caret line="45" column="36" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -105,8 +99,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/eroad/MainHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="67" column="73" selection-start-line="67" selection-start-column="73" selection-end-line="67" selection-end-column="73" />
+            <state relative-caret-position="-143">
+              <caret line="70" column="30" selection-start-line="70" selection-start-column="30" selection-end-line="70" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -115,28 +109,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AlonTest.iml">
+        <entry file="file://$PROJECT_DIR$/src/test/java/eroad/MainHandlerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="116" selection-start-line="1" selection-start-column="116" selection-end-line="1" selection-end-column="116" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/util/concurrent/CompletableFuture.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="57" column="11" selection-start-line="57" selection-start-column="11" selection-end-line="57" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/eroad/file/FileProcessor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+            <state relative-caret-position="401">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -145,10 +121,23 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/eroad/file/CSVFileProcessor.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/eroad/model/DataModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+            <state relative-caret-position="221">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+              <folding>
+                <element signature="e#853#854#0" expanded="true" />
+                <element signature="e#897#898#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/eroad/utils/DateUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="50" column="1" lean-forward="true" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -156,20 +145,50 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/eroad/utils/FileUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="52" column="25" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/eroad/file/CSVFileProcessorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+            <state relative-caret-position="-925">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+        <entry file="file://$PROJECT_DIR$/src/test/java/eroad/utils/DateUtilsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="72" column="21" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="21" />
+            <state relative-caret-position="469">
+              <caret line="29" column="1" lean-forward="true" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/eroad/utils/FileUtilsTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -192,6 +211,10 @@
       <find>CSVFileProcessor</find>
       <find>ortime</find>
       <find>maven</find>
+      <find>List&lt;String[]&gt;</find>
+      <find>temporaryFolder</find>
+      <find>Invalid API key</find>
+      <find>date</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -229,19 +252,22 @@
         <option value="$PROJECT_DIR$/src/test/java/eroad/utils/DateUtilsTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/eroad/utils/DateUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/eroad/Application.java" />
-        <option value="$PROJECT_DIR$/src/main/java/eroad/model/ModelFieldIndexes.java" />
-        <option value="$PROJECT_DIR$/src/main/java/eroad/model/DataModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/eroad/file/FileType.java" />
-        <option value="$PROJECT_DIR$/src/test/java/eroad/utils/FileUtilsTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/eroad/utils/FileUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/eroad/file/FileExtension.java" />
-        <option value="$PROJECT_DIR$/src/main/java/eroad/file/CSVFileProcessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/eroad/api/ApiController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/eroad/api/GoogleApiController.java" />
-        <option value="$PROJECT_DIR$/src/test/java/eroad/file/CSVFileProcessorTest.java" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/main/java/eroad/MainHandler.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/eroad/file/examples/input.csv" />
+        <option value="$PROJECT_DIR$/src/test/resources/csv/input.csv" />
+        <option value="$PROJECT_DIR$/src/test/java/eroad/file/CSVFileProcessorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/eroad/MainHandler.java" />
+        <option value="$PROJECT_DIR$/src/test/java/eroad/utils/FileUtilsTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/eroad/file/CSVFileProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/eroad/model/DataModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/eroad/model/ModelFieldIndexes.java" />
+        <option value="$PROJECT_DIR$/src/test/java/eroad/MainHandlerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/eroad/api/GoogleApiController.java" />
       </list>
     </option>
   </component>
@@ -338,6 +364,24 @@
               <item name="AlonTest" type="b2602c69:ProjectViewProjectNode" />
               <item name="EroadTest" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="eroad" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AlonTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EroadTest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="eroad" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AlonTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EroadTest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -364,6 +408,30 @@
               <item name="eroad" type="462c0819:PsiDirectoryNode" />
               <item name="file" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="AlonTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EroadTest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="eroad" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AlonTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EroadTest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AlonTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EroadTest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="csv" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -383,22 +451,31 @@
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552977828252" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/resources" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="eroad" />
       <recent name="eroad.file" />
       <recent name="eroad.utils" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Alon\Development\Eroad_01_05_19\EroadTest\src\test\java\eroad\file" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Alon\Development\Eroad_01_05_19\EroadTest\src\test\resources" />
+      <recent name="D:\Alon\Development\Eroad_01_05_19\EroadTest\src\test\java\eroad\file\examples" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -413,28 +490,34 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Application">
-    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Eroad_App">
+    <configuration name="Eroad_App" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="eroad.Application" />
       <module name="AlonTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="eroad.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CSVFileProcessorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AlonTest" />
+      <option name="PACKAGE_NAME" value="eroad.file" />
+      <option name="MAIN_CLASS_NAME" value="eroad.file.CSVFileProcessorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DateUtilsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AlonTest" />
+      <option name="PACKAGE_NAME" value="eroad.utils" />
+      <option name="MAIN_CLASS_NAME" value="eroad.utils.DateUtilsTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="FileUtilsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AlonTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="eroad.utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <option name="PACKAGE_NAME" value="eroad.utils" />
       <option name="MAIN_CLASS_NAME" value="eroad.utils.FileUtilsTest" />
       <option name="TEST_OBJECT" value="class" />
@@ -442,50 +525,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileUtilsTest.getFileExtensionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FileUtilsTest.validateFileInputTest_emptyFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AlonTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="eroad.utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <option name="PACKAGE_NAME" value="eroad.utils" />
       <option name="MAIN_CLASS_NAME" value="eroad.utils.FileUtilsTest" />
-      <option name="METHOD_NAME" value="getFileExtensionTest" />
+      <option name="METHOD_NAME" value="validateFileInputTest_emptyFile" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileUtilsTest.validateFileInputTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MainHandlerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AlonTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="eroad.utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="eroad.utils" />
-      <option name="MAIN_CLASS_NAME" value="eroad.utils.FileUtilsTest" />
-      <option name="METHOD_NAME" value="validateFileInputTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FileUtilsTest.validateFileInputTest_NotSupportedFileExtension" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AlonTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="eroad.utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="eroad.utils" />
-      <option name="MAIN_CLASS_NAME" value="eroad.utils.FileUtilsTest" />
-      <option name="METHOD_NAME" value="validateFileInputTest_NotSupportedFileExtension" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="eroad" />
+      <option name="MAIN_CLASS_NAME" value="eroad.MainHandlerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -500,19 +554,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Application" />
-      <item itemvalue="JUnit.FileUtilsTest.getFileExtensionTest" />
-      <item itemvalue="JUnit.FileUtilsTest.validateFileInputTest" />
+      <item itemvalue="Application.Eroad_App" />
+      <item itemvalue="JUnit.FileUtilsTest.validateFileInputTest_emptyFile" />
+      <item itemvalue="JUnit.CSVFileProcessorTest" />
+      <item itemvalue="JUnit.DateUtilsTest" />
       <item itemvalue="JUnit.FileUtilsTest" />
-      <item itemvalue="JUnit.FileUtilsTest.validateFileInputTest_NotSupportedFileExtension" />
+      <item itemvalue="JUnit.MainHandlerTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Application" />
-        <item itemvalue="JUnit.FileUtilsTest.getFileExtensionTest" />
+        <item itemvalue="JUnit.CSVFileProcessorTest" />
+        <item itemvalue="JUnit.MainHandlerTest" />
         <item itemvalue="JUnit.FileUtilsTest" />
-        <item itemvalue="JUnit.FileUtilsTest.validateFileInputTest_NotSupportedFileExtension" />
-        <item itemvalue="JUnit.FileUtilsTest.validateFileInputTest" />
+        <item itemvalue="JUnit.DateUtilsTest" />
+        <item itemvalue="JUnit.FileUtilsTest.validateFileInputTest_emptyFile" />
       </list>
     </recent_temporary>
   </component>
@@ -530,38 +585,53 @@
       <workItem from="1551578356754" duration="29157000" />
       <workItem from="1551612742119" duration="174000" />
     </task>
+    <task id="LOCAL-00001" summary="Using Google Maps Geo Api.&#10;Use of CompletableFuture added.&#10;Switched to Java 12.">
+      <created>1557797022903</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1557797022903</updated>
+    </task>
+    <task id="LOCAL-00002" summary="API key removed">
+      <created>1557797088061</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1557797088061</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FileUtilsTest_getFileExtensionTest - 2019.03.03 at 23h 35m 54s.xml">
-      <configuration name="FileUtilsTest.getFileExtensionTest" configurationId="JUnit" />
+    <history-entry file="FileUtilsTest_validateFileInputTest_NoFileExtension - 2019.05.18 at 17h 30m 37s.xml">
+      <configuration name="FileUtilsTest.validateFileInputTest_NoFileExtension" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FileUtilsTest_getFileExtensionTest - 2019.03.03 at 23h 36m 29s.xml">
-      <configuration name="FileUtilsTest.getFileExtensionTest" configurationId="JUnit" />
+    <history-entry file="FileUtilsTest_validateFileInputTest_NoFileExtension - 2019.05.18 at 17h 30m 43s.xml">
+      <configuration name="FileUtilsTest.validateFileInputTest_NoFileExtension" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FileUtilsTest_isValidFileTypeTest - 2019.03.03 at 23h 37m 40s.xml">
-      <configuration name="FileUtilsTest.isValidFileTypeTest" configurationId="JUnit" />
+    <history-entry file="FileUtilsTest_validateFileInputTest_emptyFile - 2019.05.18 at 17h 31m 23s.xml">
+      <configuration name="FileUtilsTest.validateFileInputTest_emptyFile" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FileUtilsTest_validateFileInputTest - 2019.03.03 at 23h 44m 29s.xml">
-      <configuration name="FileUtilsTest.validateFileInputTest" configurationId="JUnit" />
+    <history-entry file="FileUtilsTest_validateFileInputTest_emptyFile - 2019.05.18 at 17h 31m 27s.xml">
+      <configuration name="FileUtilsTest.validateFileInputTest_emptyFile" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FileUtilsTest_validateFileInputTest - 2019.03.03 at 23h 45m 45s.xml">
-      <configuration name="FileUtilsTest.validateFileInputTest" configurationId="JUnit" />
+    <history-entry file="CSVFileProcessorTest - 2019.05.18 at 17h 32m 03s.xml">
+      <configuration name="CSVFileProcessorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FileUtilsTest - 2019.03.03 at 23h 48m 22s.xml">
+    <history-entry file="DateUtilsTest - 2019.05.18 at 17h 32m 08s.xml">
+      <configuration name="DateUtilsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FileUtilsTest - 2019.05.18 at 17h 32m 13s.xml">
       <configuration name="FileUtilsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FileUtilsTest - 2019.03.03 at 23h 48m 35s.xml">
-      <configuration name="FileUtilsTest" configurationId="JUnit" />
+    <history-entry file="MainHandlerTest - 2019.05.18 at 17h 32m 19s.xml">
+      <configuration name="MainHandlerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FileUtilsTest_validateFileInputTest_NotSupportedFileExtension - 2019.03.03 at 23h 49m 40s.xml">
-      <configuration name="FileUtilsTest.validateFileInputTest_NotSupportedFileExtension" configurationId="JUnit" />
+    <history-entry file="MainHandlerTest_testUpdateModel_WrongApiKey - 2019.05.18 at 17h 40m 06s.xml">
+      <configuration name="MainHandlerTest.testUpdateModel_WrongApiKey" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FileUtilsTest - 2019.03.03 at 23h 50m 42s.xml">
-      <configuration name="FileUtilsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FileUtilsTest_getFileExtensionTest - 2019.03.15 at 13h 01m 30s.xml">
-      <configuration name="FileUtilsTest.getFileExtensionTest" configurationId="JUnit" />
+    <history-entry file="CSVFileProcessorTest - 2019.05.18 at 17h 42m 35s.xml">
+      <configuration name="CSVFileProcessorTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
@@ -578,6 +648,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7248104" visible="true" weight="0.21375267" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -589,19 +660,58 @@
       <window_info id="Favorites" order="7" sideWeight="0.2751896" side_tool="true" weight="0.20095949" />
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.42795232" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3802817" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4989339" weight="0.32827735" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4946695" visible="true" weight="0.42795232" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.6684435" weight="0.3802817" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946696" weight="0.32936078" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.4539545" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.3315565" side_tool="true" weight="0.3802817" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="13" sideWeight="0.49946696" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.4989339" weight="0.32936078" />
+      <window_info anchor="bottom" id="JRebel Executor" order="14" />
+      <window_info anchor="bottom" id="JRebel Console" order="15" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="16" weight="0.32936078" />
+      <window_info anchor="bottom" id="TeamCity" order="17" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.11247335" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.32995737" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7248104" visible="true" weight="0.21375267" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="JRebel" order="3" side_tool="true" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="UI Designer" order="6" />
+      <window_info id="Favorites" order="7" sideWeight="0.2751896" side_tool="true" weight="0.20095949" />
+      <window_info id="Web" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4989339" weight="0.32827735" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4946695" weight="0.42795232" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.6684435" visible="true" weight="0.3802817" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946696" weight="0.32936078" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.4539545" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.3315565" side_tool="true" visible="true" weight="0.3802817" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.4989339" weight="0.32936078" />
       <window_info anchor="bottom" id="JRebel Executor" order="14" />
       <window_info anchor="bottom" id="JRebel Console" order="15" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="16" weight="0.32936078" />
@@ -616,10 +726,15 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Using Google Maps Geo Api.&#10;Use of CompletableFuture added.&#10;Switched to Java 12." />
+    <MESSAGE value="API key removed" />
+    <option name="LAST_COMMIT_MESSAGE" value="API key removed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -648,12 +763,79 @@
           <properties />
           <option name="timeStamp" value="23" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/eroad/MainHandler.java</url>
+          <line>76</line>
+          <properties />
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/eroad/MainHandler.java</url>
+          <line>86</line>
+          <properties />
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/eroad/MainHandler.java</url>
+          <line>73</line>
+          <properties />
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>e.getMessage()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>model.getLocalDate()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>nextLine</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>assertEquals(models.get(0).getUtcDate(),list.get(0)[ModelFieldIndexes.UTC_DATE.getIndex()]);</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>list.get(0)[0]</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>list.get(0).toString()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>list.get(0)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>models.get(0)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>modelsFromFile.get(0).getLongitude()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/eroad.java" />
@@ -669,61 +851,8 @@
     <entry file="jar://$MAVEN_REPOSITORY$/com/opencsv/opencsv/4.0/opencsv-4.0.jar!/com/opencsv/CSVWriter.class" />
     <entry file="jar://$PROJECT_DIR$/../../../bin/jdk/src.zip!/java/lang/System.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/eroad/EroadRestController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/eroad/utils/DateUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/eroad/api/ApiController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/eroad/api/HttpController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/eroad/file/FileExtension.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/eroad/model/DataModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/eroad/model/ModelFieldIndexes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="53" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/eroad/utils/FileUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/eroad/utils/FileUtilsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="31" column="46" lean-forward="true" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#460#461#0" expanded="true" />
-            <element signature="e#532#533#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -734,77 +863,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/eroad/utils/DateUtilsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="19" column="48" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/eroad/api/GoogleApiController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/eroad/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AlonTest.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="116" selection-start-line="1" selection-start-column="116" selection-end-line="1" selection-end-column="116" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/util/concurrent/CompletableFuture.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="57" column="11" selection-start-line="57" selection-start-column="11" selection-end-line="57" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/eroad/file/CSVFileProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/eroad/file/FileProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/eroad/MainHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="67" column="73" selection-start-line="67" selection-start-column="73" selection-end-line="67" selection-end-column="73" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -815,17 +877,186 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/csv/input2.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/csv/input - Copy.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/csv/output.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/eroad/file/input.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/csv/input.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/csv/input - Copy.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AlonTest.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="116" selection-start-line="1" selection-start-column="116" selection-end-line="1" selection-end-column="116" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="35" lean-forward="true" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+        <state relative-caret-position="85">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/eroad/file/CSVFileProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-591">
+          <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/eroad/file/FileExtension.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/eroad/file/FileProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/eroad/model/ModelFieldIndexes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/eroad/model/DataModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#853#854#0" expanded="true" />
+            <element signature="e#897#898#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/eroad/utils/DateUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="50" column="1" lean-forward="true" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/eroad/utils/FileUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="52" column="25" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/eroad/MainHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-143">
+          <caret line="70" column="30" selection-start-line="70" selection-start-column="30" selection-end-line="70" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/eroad/file/CSVFileProcessorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        <state relative-caret-position="-925">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/eroad/utils/DateUtilsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="29" column="1" lean-forward="true" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/eroad/utils/FileUtilsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/eroad/MainHandlerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/eroad/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="724">
+          <caret line="45" column="36" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/eroad/api/GoogleApiController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#399#400#0" expanded="true" />
+            <element signature="e#480#481#0" expanded="true" />
+            <element signature="e#589#590#0" expanded="true" />
+            <element signature="e#619#620#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

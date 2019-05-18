@@ -2,7 +2,7 @@ package eroad.model;
 
 /**
  * @author Alon Kodner
- *
+ * <p>
  * Used for indicating the index of each model field in the CSV
  */
 public enum ModelFieldIndexes {
