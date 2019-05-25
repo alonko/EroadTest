@@ -27,7 +27,7 @@ public class CSVFileProcessor implements FileProcessor {
      * @return List of models represented in the file
      */
     @Override
-    public List<DataModel> getModelsFromFile(String sourceFileName) {
+    public List<DataModel> getModelsFromFile(String sourceFileName) throws IOException {
         List<DataModel> inputList = new ArrayList<>();
         try (CSVReader reader = new CSVReader(new FileReader(sourceFileName))) {
             String[] nextLine;
@@ -35,9 +35,10 @@ public class CSVFileProcessor implements FileProcessor {
                 DataModel model = createModel(nextLine);
                 inputList.add(model);
             }
-        } catch (IOException e) {
+        } catch (IOException exception) {
             LOGGER.severe("Failed to process file");
-            e.printStackTrace();
+            exception.printStackTrace();
+            throw exception;
         }
         return inputList;
     }
@@ -58,6 +59,7 @@ public class CSVFileProcessor implements FileProcessor {
     }
 
     List<String[]> createModelsStringRepresentation(List<DataModel> models) {
+        assert models != null : "Data models can not be null";
         List<String[]> modelsToWrite = new ArrayList<>(models.size());
         for (DataModel model : models) {
             String[] entries = new String[5];

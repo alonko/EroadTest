@@ -1,6 +1,7 @@
 package eroad;
 
-import eroad.api.GoogleApiController;
+import eroad.api.GoogleAPIController;
+import eroad.file.CSVFileProcessorTest;
 import eroad.file.FileProcessor;
 import eroad.model.DataModel;
 import org.junit.Rule;
@@ -10,13 +11,13 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 
+import java.io.IOException;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
 public class MainHandlerTest {
@@ -26,13 +27,13 @@ public class MainHandlerTest {
     @Rule
     public ExpectedException exceptionRule = ExpectedException.none();
 
-    private MainHandler getMainHandler(FileProcessor fileProcessor, GoogleApiController googleApiController) {
+    private MainHandler getMainHandler(FileProcessor fileProcessor, GoogleAPIController googleApiController) {
         return new MainHandler(fileProcessor, googleApiController);
     }
 
     @Test
     public void testGetTimeZone() {
-        MainHandler mainHandler = getMainHandler(fileProcessor, new GoogleApiController());
+        MainHandler mainHandler = getMainHandler(fileProcessor, new GoogleAPIController());
         DataModel model = new DataModel();
         model.setUtcDate("2013-07-10 02:52:49");
         model.setLatitude("-44.490947");
@@ -48,7 +49,7 @@ public class MainHandlerTest {
 
     @Test
     public void testGetTimeZone_WrongApiKey() {
-        GoogleApiController googleApiController = new GoogleApiController() {
+        GoogleAPIController googleApiController = new GoogleAPIController() {
             @Override
             public String getApiKey() {
                 return "test";
@@ -69,7 +70,7 @@ public class MainHandlerTest {
 
     @Test
     public void testUpdateModel() {
-        MainHandler mainHandler = getMainHandler(fileProcessor, new GoogleApiController());
+        MainHandler mainHandler = getMainHandler(fileProcessor, new GoogleAPIController());
         DataModel model = new DataModel();
         model.setUtcDate("2013-07-10 02:52:49");
         model.setLatitude("-44.490947");
@@ -85,5 +86,20 @@ public class MainHandlerTest {
         mainHandler.updateModel(model, timeZoneCompletableFuture);
         assertEquals("Pacific/Auckland", model.getTimeZoneId());
         assertEquals("2013-07-10T14:52:49", model.getLocalDate());
+    }
+
+    @Test
+    public void testProcessFiles() throws IOException {
+        MainHandler mainHandler = getMainHandler(fileProcessor, new GoogleAPIController());
+        mainHandler.processFiles(CSVFileProcessorTest.INPUT_FILE, CSVFileProcessorTest.OUTPUT_FILE);
+        verify(fileProcessor).getModelsFromFile(CSVFileProcessorTest.INPUT_FILE);
+        verify(fileProcessor).writeModelsToFile(eq(CSVFileProcessorTest.OUTPUT_FILE), any());
+
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testProcessFiles_NotSupportedFileExtension() throws IOException {
+        MainHandler mainHandler = getMainHandler(fileProcessor, new GoogleAPIController());
+        mainHandler.processFiles("test.txt", CSVFileProcessorTest.OUTPUT_FILE);
     }
 }

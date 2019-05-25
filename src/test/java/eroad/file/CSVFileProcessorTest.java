@@ -4,8 +4,13 @@ import com.opencsv.CSVReader;
 import eroad.model.DataModel;
 import eroad.model.ModelFieldIndexes;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
+import org.junit.runner.RunWith;
+import org.mockito.junit.MockitoJUnitRunner;
 
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -13,9 +18,13 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
+@RunWith(MockitoJUnitRunner.class)
 public class CSVFileProcessorTest {
-    private final static String INPUT_FILE = "src/test/resources/csv/input.csv";
-    private final static String OUTPUT_FILE = "src/test/resources/csv/output.csv";
+    @Rule
+    public ExpectedException exceptionRule = ExpectedException.none();
+
+    public final static String INPUT_FILE = "src/test/resources/csv/input.csv";
+    public final static String OUTPUT_FILE = "src/test/resources/csv/output.csv";
 
     private CSVFileProcessor fileProcessor;
     private List<DataModel> models;
@@ -43,12 +52,17 @@ public class CSVFileProcessorTest {
     }
 
     @Test
-    public void testGetModelsFromFile() {
+    public void testGetModelsFromFile() throws IOException {
         List<DataModel> modelsFromFile = fileProcessor.getModelsFromFile(INPUT_FILE);
         assertEquals(3, modelsFromFile.size());
         assertEquals("2013-07-10 02:52:49", modelsFromFile.get(0).getUtcDate());
         assertEquals("-44.490947", modelsFromFile.get(0).getLatitude());
         assertEquals("171.220966", modelsFromFile.get(0).getLongitude());
+    }
+
+    @Test(expected = FileNotFoundException.class)
+    public void testFileNotFound() throws IOException {
+        fileProcessor.getModelsFromFile("TEST.csv");
     }
 
     @Test
@@ -83,6 +97,13 @@ public class CSVFileProcessorTest {
         assertEquals(models.get(0).getLongitude(), list.get(0)[ModelFieldIndexes.LONGITUDE.getIndex()]);
         assertEquals(models.get(0).getTimeZoneId(), list.get(0)[ModelFieldIndexes.TIME_ZONE.getIndex()]);
         assertEquals(models.get(0).getLocalDate(), list.get(0)[ModelFieldIndexes.LOCAL_DATE.getIndex()]);
+    }
+
+    @Test
+    public void testCreateModelsWithNullModels() {
+        exceptionRule.expect(AssertionError.class);
+        exceptionRule.expectMessage("Data models can not be null");
+        fileProcessor.createModelsStringRepresentation(null);
     }
 
     @Test

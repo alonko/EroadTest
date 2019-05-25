@@ -9,11 +9,11 @@ import org.springframework.stereotype.Component;
  * Used for comunication with Google maps GEO API
  */
 @Component
-public class GoogleApiController {
+public class GoogleAPIController {
     private static final String API_KEY = "";
     private static GeoApiContext context;
 
-    public GoogleApiController() {
+    public GoogleAPIController() {
         context = new GeoApiContext.Builder().apiKey(getApiKey()).build();
     }
 

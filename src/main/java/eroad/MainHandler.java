@@ -3,7 +3,7 @@ package eroad;
 import com.google.maps.PendingResult;
 import com.google.maps.TimeZoneApi;
 import com.google.maps.model.LatLng;
-import eroad.api.GoogleApiController;
+import eroad.api.GoogleAPIController;
 import eroad.file.FileExtension;
 import eroad.file.FileProcessor;
 import eroad.model.DataModel;
@@ -12,6 +12,7 @@ import eroad.utils.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.TimeZone;
 import java.util.concurrent.CompletableFuture;
@@ -28,10 +29,10 @@ public class MainHandler {
     private final static Logger LOGGER = Logger.getLogger(MainHandler.class.getName());
 
     private final FileProcessor fileProcessor;
-    private final GoogleApiController apiController;
+    private final GoogleAPIController apiController;
 
     @Autowired
-    public MainHandler(FileProcessor fileProcessor, GoogleApiController apiController) {
+    public MainHandler(FileProcessor fileProcessor, GoogleAPIController apiController) {
         this.fileProcessor = fileProcessor;
         this.apiController = apiController;
     }
@@ -39,7 +40,7 @@ public class MainHandler {
     /**
      * Read the input file, process the files and write to the output file
      */
-    public void processFiles(String inputFileName, String outputFileName) {
+    public void processFiles(String inputFileName, String outputFileName) throws IOException {
         FileUtils.validateFileInput(inputFileName, "Input");
         FileUtils.validateFileInput(outputFileName, "Output");
         String fileExtension = FileUtils.getFileExtension(inputFileName);
