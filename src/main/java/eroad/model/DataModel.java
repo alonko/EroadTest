@@ -1,22 +1,25 @@
 package eroad.model;
 
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+
 /**
  * @author Alon Kodner
  * <p>
  * Object representation of the CSV model
  */
 public class DataModel {
-    private String utcDate;
+    private ZonedDateTime utcDate;
     private String latitude;
     private String longitude;
-    private String timeZoneId;
-    private String localDate;
+    private ZoneId timeZoneId;
+    private ZonedDateTime dateByZone;
 
-    public String getUtcDate() {
+    public ZonedDateTime getUtcDate() {
         return utcDate;
     }
 
-    public void setUtcDate(String utcDate) {
+    public void setUtcDate(ZonedDateTime utcDate) {
         this.utcDate = utcDate;
     }
 
@@ -36,19 +39,19 @@ public class DataModel {
         this.longitude = longitude;
     }
 
-    public String getTimeZoneId() {
+    public ZoneId getTimeZoneId() {
         return timeZoneId;
     }
 
-    public void setTimeZoneId(String timeZoneId) {
+    public void setTimeZoneId(ZoneId timeZoneId) {
         this.timeZoneId = timeZoneId;
     }
 
-    public String getLocalDate() {
-        return localDate;
+    public ZonedDateTime getDateByZone() {
+        return dateByZone;
     }
 
-    public void setLocalDate(String localDate) {
-        this.localDate = localDate;
+    public void setDateByZone(ZonedDateTime dateByZone) {
+        this.dateByZone = dateByZone;
     }
 }

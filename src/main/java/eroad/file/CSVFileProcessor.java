@@ -4,6 +4,7 @@ import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
 import eroad.model.DataModel;
 import eroad.model.ModelFieldIndexes;
+import eroad.utils.DateUtils;
 import org.springframework.stereotype.Component;
 
 import java.io.FileReader;
@@ -63,11 +64,11 @@ public class CSVFileProcessor implements FileProcessor {
         List<String[]> modelsToWrite = new ArrayList<>(models.size());
         for (DataModel model : models) {
             String[] entries = new String[5];
-            entries[ModelFieldIndexes.UTC_DATE.getIndex()] = model.getUtcDate().trim();
+            entries[ModelFieldIndexes.UTC_DATE.getIndex()] = model.getUtcDate().format(DateUtils.INPUT_DATE_FORMATTER);
             entries[ModelFieldIndexes.LATITUDE.getIndex()] = model.getLatitude().trim();
             entries[ModelFieldIndexes.LONGITUDE.getIndex()] = model.getLongitude().trim();
-            entries[ModelFieldIndexes.TIME_ZONE.getIndex()] = model.getTimeZoneId().trim();
-            entries[ModelFieldIndexes.LOCAL_DATE.getIndex()] = model.getLocalDate().trim();
+            entries[ModelFieldIndexes.TIME_ZONE.getIndex()] = model.getTimeZoneId().getId();
+            entries[ModelFieldIndexes.LOCAL_DATE.getIndex()] = model.getDateByZone().format(DateUtils.OUTPUT_DATE_FORMATTER);
             modelsToWrite.add(entries);
         }
         return modelsToWrite;
@@ -81,7 +82,7 @@ public class CSVFileProcessor implements FileProcessor {
         assert fileLine.length == 3 : "Each line needs to contain 3 values";
         DataModel model = new DataModel();
         try {
-            model.setUtcDate(fileLine[ModelFieldIndexes.UTC_DATE.getIndex()]);
+            model.setUtcDate(DateUtils.getUTCDate(fileLine[ModelFieldIndexes.UTC_DATE.getIndex()], DateUtils.INPUT_DATE_FORMATTER));
             model.setLatitude(fileLine[ModelFieldIndexes.LATITUDE.getIndex()]);
             model.setLongitude(fileLine[ModelFieldIndexes.LONGITUDE.getIndex()]);
         } catch (Exception e) {

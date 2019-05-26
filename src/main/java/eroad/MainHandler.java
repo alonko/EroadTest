@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+import java.time.ZoneId;
 import java.util.List;
 import java.util.TimeZone;
 import java.util.concurrent.CompletableFuture;
@@ -25,14 +26,14 @@ import java.util.stream.Collectors;
  * @author Alon Kodner
  */
 @Component
-public class MainHandler {
+class MainHandler {
     private final static Logger LOGGER = Logger.getLogger(MainHandler.class.getName());
 
     private final FileProcessor fileProcessor;
     private final GoogleAPIController apiController;
 
     @Autowired
-    public MainHandler(FileProcessor fileProcessor, GoogleAPIController apiController) {
+    MainHandler(FileProcessor fileProcessor, GoogleAPIController apiController) {
         this.fileProcessor = fileProcessor;
         this.apiController = apiController;
     }
@@ -40,7 +41,7 @@ public class MainHandler {
     /**
      * Read the input file, process the files and write to the output file
      */
-    public void processFiles(String inputFileName, String outputFileName) throws IOException {
+    void processFiles(String inputFileName, String outputFileName) throws IOException {
         FileUtils.validateFileInput(inputFileName, "Input");
         FileUtils.validateFileInput(outputFileName, "Output");
         String fileExtension = FileUtils.getFileExtension(inputFileName);
@@ -69,17 +70,18 @@ public class MainHandler {
         }
     }
 
-    CompletableFuture<String> getTimeZone(DataModel dataModel) {
+    CompletableFuture<ZoneId> getTimeZone(DataModel dataModel) {
         LatLng location = new LatLng(Double.parseDouble(dataModel.getLatitude()), Double.parseDouble(dataModel.getLongitude()));
-        final CompletableFuture<String> future = new CompletableFuture<>();
+        final CompletableFuture<ZoneId> future = new CompletableFuture<>();
         TimeZoneApi.getTimeZone(apiController.getGeoApiContext(), location).setCallback(new PendingResult.Callback<>() {
             @Override
             public void onResult(TimeZone timeZone) {
                 if (timeZone != null) {
-                    future.complete(timeZone.getID());
+                    ZoneId zoneId = ZoneId.of(timeZone.getID());
+                    future.complete(zoneId);
                 } else {
                     LOGGER.severe("Empty time zone received from Google Api");
-                    future.complete("");
+                    future.complete(null);
                 }
             }
 
@@ -92,13 +94,11 @@ public class MainHandler {
         return future;
     }
 
-    CompletableFuture<DataModel> updateModel(DataModel dataModel, CompletableFuture<String> timeZoneIdCompletableFuture) {
-        Long timestamp = DateUtils.getUTCSeconds(dataModel.getUtcDate());
-        assert timestamp != null;
+    CompletableFuture<DataModel> updateModel(DataModel dataModel, CompletableFuture<ZoneId> timeZoneIdCompletableFuture) {
         try {
-            String timeZoneId = timeZoneIdCompletableFuture.get();
+            ZoneId timeZoneId = timeZoneIdCompletableFuture.get();
             dataModel.setTimeZoneId(timeZoneId);
-            dataModel.setLocalDate(DateUtils.getLocalDate(timestamp, timeZoneId));
+            dataModel.setDateByZone(DateUtils.getZonedDateFromUTCDate(dataModel.getUtcDate(), timeZoneId));
         } catch (InterruptedException | ExecutionException e) {
             LOGGER.severe("Failed to retrieve time zone information: " + e.getMessage());
             e.printStackTrace();
