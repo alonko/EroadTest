@@ -101,7 +101,6 @@ class MainHandler {
             dataModel.setDateByZone(DateUtils.getZonedDateFromUTCDate(dataModel.getUtcDate(), timeZoneId));
         } catch (InterruptedException | ExecutionException e) {
             LOGGER.severe("Failed to retrieve time zone information: " + e.getMessage());
-            e.printStackTrace();
         }
         return CompletableFuture.completedFuture(dataModel);
     }

@@ -11,7 +11,7 @@ import java.util.stream.Stream;
  */
 public class FileUtils {
     /**
-     * @param fileName - The file name to validate
+     * @param fileName        - The file name to validate
      * @param fileDescription - The description of the file for error handling (Input/Output)
      */
     public static void validateFileInput(String fileName, String fileDescription) {
@@ -33,7 +33,6 @@ public class FileUtils {
     }
 
     /**
-     *
      * @param fileExtension The file extension (csv)
      * @return true if the file type is supported (currently only csv is supported)
      */
@@ -46,7 +45,6 @@ public class FileUtils {
     }
 
     /**
-     *
      * @param fileName the full file name
      * @return the extension of the file (csv)
      */

@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * @author Alon Kodner
- *
+ * <p>
  * Used for comunication with Google maps GEO API
  */
 @Component
@@ -21,7 +21,7 @@ public class GoogleAPIController {
         return context;
     }
 
-    public String getApiKey(){
+    public String getApiKey() {
         return API_KEY;
     }
 }

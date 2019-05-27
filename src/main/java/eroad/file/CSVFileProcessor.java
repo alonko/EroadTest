@@ -55,7 +55,6 @@ public class CSVFileProcessor implements FileProcessor {
             writer.writeAll(modelsToWrite, false);
         } catch (IOException e) {
             LOGGER.severe("Failed to write files to file");
-            e.printStackTrace();
         }
     }
 
@@ -87,7 +86,6 @@ public class CSVFileProcessor implements FileProcessor {
             model.setLongitude(fileLine[ModelFieldIndexes.LONGITUDE.getIndex()]);
         } catch (Exception e) {
             LOGGER.severe("Failed to create the model");
-            e.printStackTrace();
         }
 
         return model;
